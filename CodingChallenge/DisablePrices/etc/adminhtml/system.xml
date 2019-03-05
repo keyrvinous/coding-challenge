@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by Keyrvin Yongque
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="disable_price" translate="label" type="text" sortOrder="700" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Disable Price For Selected Attribute Sets</label>
+                <field id="attribute_sets" translate="label" type="multiselect" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Choose Attribute Sets:</label>
+                    <source_model>Magento\Catalog\Model\Product\AttributeSet\Options</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

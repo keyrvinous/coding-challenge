@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by Keyrvin Yongque
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Ui\DataProvider\Product\Form\ProductDataProvider">
+        <plugin name="DisablePricesMeta"
+                type="CodingChallenge\DisablePrices\Ui\DataProvider\Product\Form\ProductDataProvider"
+                sortOrder="70" />
+    </type>
+</config>
