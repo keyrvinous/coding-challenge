@@ -34,6 +34,25 @@ class ProductDataProvider
     }
 
     /**
+     * @param PluginProductDataProvider $subject
+     * @param $result
+     * @return array
+     */
+    public function afterGetData(PluginProductDataProvider $subject, $result)
+    {
+
+        $productAttributeSet = $this->locator->getProduct()->getAttributeSetId();
+
+        $helperAttrSets = $this->helper->getAttributeSets();
+
+        if (!empty($helperAttrSets) || in_array($productAttributeSet, explode(',', $helperAttrSets))) {
+            $result[1]['product']['price'] = "0.00";
+        }
+
+        return $result;
+    }
+
+    /**
      * Plugin After getMeta from ProductDataProvider
      *
      * @param PluginProductDataProvider $subject
