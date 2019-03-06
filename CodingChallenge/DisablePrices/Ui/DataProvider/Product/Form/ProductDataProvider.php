@@ -34,6 +34,8 @@ class ProductDataProvider
     }
 
     /**
+     * Set default price into 0.00
+     *
      * @param PluginProductDataProvider $subject
      * @param $result
      * @return array
