@@ -68,7 +68,7 @@ class ProductDataProvider
         $advancePricing = 'advanced-pricing';
         $contTCID = 'container_tax_class_id';
         $chldrn = 'children';
-        $TCID = 'tax_class_id';
+        $tcID = 'tax_class_id';
 
         $productAttributeSet = $this->locator->getProduct()->getAttributeSetId();
 
@@ -81,7 +81,7 @@ class ProductDataProvider
         }
 
         $result[$prodDetails][$chldrn]['container_price']['arguments']['data']['config']['visible'] = $boolVal;
-        $result[$prodDetails][$chldrn][$contTCID][$chldrn][$TCID]['arguments']['data']['config']['visible'] = $boolVal;
+        $result[$prodDetails][$chldrn][$contTCID][$chldrn][$tcID]['arguments']['data']['config']['visible'] = $boolVal;
         $result[$advancePricing]['arguments']['data']['config']['visible'] = $boolVal;
 
         return $result;
